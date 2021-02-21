@@ -1,1 +1,0 @@
-# iraqis-in-tech.org
