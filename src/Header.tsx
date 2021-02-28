@@ -1,14 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './Header.css';
 
 function Header() {
   return (
-    <div>
+    <div className="Header-Container">
      <img src={logo} alt="logo" />
+      <header className="Header-Text">
+        <p>
+          Iraqis In Tech (IIT)
+        </p>
+      </header>
       <header>
         <p>
-          Iraqis In Tech
+         Arabic
         </p>
       </header>
     </div>

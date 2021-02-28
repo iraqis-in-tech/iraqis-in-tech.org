@@ -15,6 +15,7 @@ import {
 function App() {
   return (
     <Router>
+      <Header/>
       <div>
         <ul>
           <li>

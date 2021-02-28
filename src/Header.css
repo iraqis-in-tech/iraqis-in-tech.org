@@ -1,0 +1,10 @@
+.Header-Container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+  }
+  
+.Header-Text {
+    font-size: 25px;
+  }
