@@ -21,18 +21,30 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/getting_in">Getting Into The Field</Link>
           </li>
           <li>
-            <Link to="/topics">Topics</Link>
+            <Link to="/finding_work">Networking, Marketing Yourself, and Finding Work</Link>
+          </li>
+          <li>
+            <Link to="/interviewing">Interviewing</Link>
+          </li>
+          <li>
+            <Link to="/moving_up">Career Progression</Link>
           </li>
         </ul>
 
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/getting_in">
+            <GettingIn />
           </Route>
-          <Route path="/topics">
+          <Route path="/finding_work">
+            <Topics />
+          </Route>
+          <Route path="/interviewing">
+            <Topics />
+          </Route>
+          <Route path="/moving_up">
             <Topics />
           </Route>
           <Route path="/">
@@ -48,8 +60,20 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function About() {
-  return <h2>About</h2>;
+function GettingIn() {
+  return <h2>Getting Into The Field</h2>;
+}
+
+function FindingWork() {
+  return <h2>Networking, Marketing Yourself, and Finding Work</h2>;
+}
+
+function Interviewing() {
+  return <h2>Interviewing</h2>;
+}
+
+function CareerProgression() {
+  return <h2>Career Progression</h2>;
 }
 
 function Topics() {
