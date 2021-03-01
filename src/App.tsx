@@ -47,7 +47,11 @@ function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div className="App-container">
+      <h2 className="App" >Home</h2>
+    </div>
+  );;
 }
 
 function CareerProgressionTopics() {
@@ -69,7 +73,7 @@ function CareerProgressionTopics() {
           <CareerProgressionTopic />
         </Route>
         <Route path={match.path}>
-          <h3>Please select a topic.</h3>
+          <h3 className="App">Please select a topic.</h3>
         </Route>
       </Switch>
     </div>
@@ -78,29 +82,20 @@ function CareerProgressionTopics() {
 
 function CareerProgressionTopic() {
   let { topicId } : any = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
+  return <h3 className="App">Requested topic ID: {topicId}</h3>;
 }
 
 function BreakingInTopics() {
   let match = useRouteMatch();
 
   return (
-    <div>
-      <h2>Breaking Into The field</h2>
-
-      <ul>
-      <li>
-          <Link to={`${match.url}/community-college`}>Community College to Four Year Degree Track</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/self-study`}>Self Study (minimum education) Track</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/bootcamp`}>
+    <div className="App-container">
+      <h2 className="App">Breaking Into The field</h2>
+      <div className="App">   <Link to={`${match.url}/community-college`}>Community College to Four Year Degree Track</Link></div>
+      <div className="App"> <Link to={`${match.url}/self-study`}>Self Study (minimum education) Track</Link></div>
+      <div className="App"> <Link to={`${match.url}/bootcamp`}>
             Bootcamp Track
-          </Link>
-        </li>
-      </ul>
+          </Link></div>
 
       {/* The Topics page has its own <Switch> with more routes
           that build on the /topics URL path. You can think of the
@@ -111,7 +106,7 @@ function BreakingInTopics() {
           <BreakingInTopic />
         </Route>
         <Route path={match.path}>
-          <h3>Please select a topic.</h3>
+          <h3  className="App" >Please select a topic.</h3>
         </Route>
       </Switch>
     </div>
@@ -120,29 +115,20 @@ function BreakingInTopics() {
 
 function BreakingInTopic() {
   let { topicId } : any = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
+  return <h3 className="App" >Requested topic ID: {topicId}</h3>;
 }
 
 function InterviewingTopics() {
   let match = useRouteMatch();
 
   return (
-    <div>
-      <h2>Interviewing</h2>
-
-      <ul>
-      <li>
-          <Link to={`${match.url}/behavioral`}>The Behavioral Interview</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/algorithmic`}>The Algorithmic Interview</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/system-design`}>
+      <div className="App-container">
+      <h2 className="App">Interviewing</h2>
+      <div className="App"> <Link to={`${match.url}/behavioral`}>The Behavioral Interview</Link></div>
+      <div className="App"><Link to={`${match.url}/algorithmic`}>The Algorithmic Interview</Link></div>
+      <div className="App"><Link to={`${match.url}/system-design`}>
             The System Design Interview
-          </Link>
-        </li>
-      </ul>
+          </Link></div>
 
       {/* The Topics page has its own <Switch> with more routes
           that build on the /topics URL path. You can think of the
@@ -153,7 +139,7 @@ function InterviewingTopics() {
           <InterviewingTopic />
         </Route>
         <Route path={match.path}>
-          <h3>Please select a topic.</h3>
+          <h3  className="App" >Please select a topic.</h3>
         </Route>
       </Switch>
     </div>
@@ -162,32 +148,19 @@ function InterviewingTopics() {
 
 function InterviewingTopic() {
   let { topicId } : any = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
+  return <h3 className="App">Requested topic ID: {topicId}</h3>;
 }
 
 function FindingWorkTopics() {
   let match = useRouteMatch();
 
   return (
-    <div>
-      <h2>Finding Work Topics</h2>
-
-      <ul>
-      <li>
-          <Link to={`${match.url}/resume`}>Your Resume</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/linkedin`}>LinkedIn</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/bumble-bizz`}>
-            Bumble Bizz
-          </Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/meetup`}>Meetup</Link>
-        </li>
-      </ul>
+    <div className="App-container">
+    <h2 className="App">Finding Work</h2>
+    <div className="App">  <Link to={`${match.url}/resume`}>Your Resume</Link></div>
+    <div className="App"> <Link to={`${match.url}/linkedin`}>LinkedIn</Link></div>
+    <div className="App"> <Link to={`${match.url}/meetup`}>Meetup</Link></div>
+    <div className="App"> <Link to={`${match.url}/bumble-bizz`}>Bumble Bizz</Link></div>
 
       {/* The Topics page has its own <Switch> with more routes
           that build on the /topics URL path. You can think of the
@@ -198,7 +171,7 @@ function FindingWorkTopics() {
           <FindingWorkTopic />
         </Route>
         <Route path={match.path}>
-          <h3>Please select a topic.</h3>
+          <h3  className="App" >Please select a topic.</h3>
         </Route>
       </Switch>
     </div>
@@ -207,7 +180,7 @@ function FindingWorkTopics() {
 
 function FindingWorkTopic() {
   let { topicId } : any = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
+  return <h3 className="App" >Requested topic ID: {topicId}</h3>;
 }
 
 export default App;

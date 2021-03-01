@@ -5,6 +5,10 @@
     justify-content: space-around;
   }
   
-.Header-text {
+.Header-title {
+    font-size: 25px;
+  }
+
+.Header-arabic-toggle {
     font-size: 25px;
   }
