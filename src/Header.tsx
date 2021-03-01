@@ -4,9 +4,9 @@ import './Header.css';
 
 function Header() {
   return (
-    <div className="Header-Container">
+    <div className="Header-container">
      <img src={logo} alt="logo" />
-      <header className="Header-Text">
+      <header className="Header-text">
         <p>
           Iraqis In Tech (IIT)
         </p>
