@@ -36,6 +36,9 @@ function Body() {
                         <Home />
                     </Route>
                 </Switch>
+                <div className="Body">
+                <iframe src="https://discord.com/widget?id=820526253026967602&theme=dark" width="350" height="350" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> {/*#allowTransparency="true" frameborder="0" */}
+                </div>
             </div>
         </Router>
     );
@@ -65,7 +68,7 @@ function CareerProgressionTopics() {
           the page that is shown when no topic is selected */}
             <Switch>
                 {/* <Route path={`${match.path}/:topicId`}>
-                    <CareerProgressionTopic />
+                    <CareerProgressionTopic />      
                 </Route> */}
                 <Route path={`${match.path}/increasing-pay`}>
                     <IncreasingYourPay />
