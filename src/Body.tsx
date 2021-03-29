@@ -37,8 +37,8 @@ function Body() {
                     </Route>
                 </Switch>
                 <div className="Body">
-       <iframe src="https://discord.com/widget?id=820526253026967602&theme=dark" width="350"  height="350" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
+                    <iframe src="https://discord.com/widget?id=820526253026967602&theme=dark" width="350" height="350" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
             </div>
         </Router>
     );

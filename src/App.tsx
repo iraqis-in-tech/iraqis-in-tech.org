@@ -5,7 +5,7 @@ import Body from './Body';
 import Footer from './Footer';
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
       <Body />
       <Footer />

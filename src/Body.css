@@ -1,5 +1,10 @@
 .Body {
     text-align: center;
+    min-height: 100vh;
+  }
+
+  .Body-links {
+    text-align: center;
   }
   
   .Body-logo {
