@@ -1,7 +1,7 @@
 .Header-container {
     background-color: #e34a5f;
     display: flex;
-    height: 80px;
+    height: 5vh;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;

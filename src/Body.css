@@ -1,6 +1,6 @@
 .Body {
     text-align: center;
-    min-height: 100vh;
+    min-height: 90vh;
   }
 
   .Body-links {
@@ -19,6 +19,13 @@
   }
   
   .Body-container {
+    justify-content: space-between;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .Body-container2 {
     justify-content: space-between;
     display: flex;
     align-content: center;
