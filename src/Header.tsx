@@ -7,13 +7,13 @@ function Header() {
     <div className="Header-container">
         <img src={logo} className="Header-logo" alt="logo" />
     
-      <h3 className="Header-title">
+      <div className="Header-title">
         Iraqis In Tech
-      </h3>
+      </div>
 
-      <h3 className="Header-arabic-toggle">
+      <div className="Header-arabic-toggle">
         [Togg]
-      </h3>
+      </div>
     </div>
   );
 }

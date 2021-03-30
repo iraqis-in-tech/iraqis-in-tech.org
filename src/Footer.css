@@ -1,6 +1,7 @@
 .Footer {
     text-align: center;
     min-height: 5vh;
+    bottom: 0;
     background-color: #343434;
  }
 
