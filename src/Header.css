@@ -2,7 +2,6 @@
     background-color: #e34a5f;
     display: flex;
     top: 0;
-    height: 5vh;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
@@ -21,15 +20,21 @@
   text-align: center;
   font-family:'Courier New', Courier, monospace;
   vertical-align: middle;
+  display: flex;
+  align-items: center;
   line-height: 5vh; 
   font-size: 20px;
 }
 
 .Header-arabic-toggle {
     font-size: 25px;
-    display:inline;
     vertical-align: middle;
+    display: inline;
+    align-items: center;
+    margin-top: 18px;
+    flex-direction: column;
     text-align: center;
+    font-size: 20px;
     font-family:'Courier New', Courier, monospace;
     margin-right: 10%;
 }
