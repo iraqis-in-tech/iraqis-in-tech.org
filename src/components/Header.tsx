@@ -1,12 +1,13 @@
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './Header.css';
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
 
+
 import React, { useCallback, useState, useEffect, useRef, FC, ChangeEvent } from 'react'
-import { RootState } from './store'
-import { setLanguage } from './store/actions/langActions'
-import { translate } from './i18n'
+import { RootState } from '../store'
+import { setLanguage } from '../store/actions/langActions'
+import { translate } from '../i18n'
 import { useDispatch, useSelector } from 'react-redux'
 
 interface HeaderProps {
@@ -14,7 +15,7 @@ interface HeaderProps {
   transparent?: boolean;
 }
 
-const Header: FC<HeaderProps> = ({ fixed, transparent }) => {
+const Header: FC<HeaderProps> = () => {
   const { language } = useSelector((state: RootState) => state.lang);
   const dispatch = useDispatch();
 
