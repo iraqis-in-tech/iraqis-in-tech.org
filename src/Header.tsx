@@ -2,34 +2,45 @@ import logo from './logo.svg';
 import './Header.css';
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
-import React, { ChangeEventHandler } from 'react'
 
-class Header extends React.Component {
-  handleLanguageChange: ChangeEventHandler<HTMLInputElement> | undefined;
+import React, { useCallback, useState, useEffect, useRef, FC, ChangeEvent } from 'react'
+import { RootState } from './store'
+import { setLanguage } from './store/actions/langActions'
+import { translate } from './i18n'
+import { useDispatch, useSelector } from 'react-redux'
 
-  state = {
-    arabic: false
-  };
+interface HeaderProps {
+  fixed?: boolean
+  transparent?: boolean;
+}
 
-  render() {
-    return (
-      <div className="Header-container">
-        <img src={logo} className="Header-logo" alt="logo" />
+const Header: FC<HeaderProps> = ({ fixed, transparent }) => {
+  const { language } = useSelector((state: RootState) => state.lang);
+  const dispatch = useDispatch();
 
-        <div className="Header-title">
-          Iraqis In Tech
-      </div>
+  const chooseLanguageHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    dispatch(setLanguage(e.target.checked ? "AR" : "EN"))
 
-        <div className="Header-arabic-toggle">
-          <div>{"Arabic"}</div>
-        <Toggle 
-          defaultChecked={this.state.arabic}
-          onChange={this.handleLanguageChange} />
-      </div>
-      
-      </div>
-    );
   }
+
+  return (
+    <div className="Header-container">
+      <img src={logo} className="Header-logo" alt="logo" />
+
+      <div className="Header-title">
+        {translate('site-title', language)}
+      </div>
+
+      <div className="Header-arabic-toggle">
+        <div>{"Arabic"}</div>
+        <Toggle
+          defaultChecked={false}
+          onChange={chooseLanguageHandler} />
+      </div>
+
+    </div>
+  );
 }
 
 export default Header;
+
